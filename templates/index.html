@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form method="post">
+        <label for="amount">Amount:</label>
+        <input type="number" step="0.01" name="amount" id="amount">
+
+        <label for="currency_code">Currency:</label>
+        <select name="currency_code" id="currency_code">
+            {% for currency_code in currency_codes %}
+                <option value="{{ currency_code }}">{{ currency_code }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Convert">
+    </form>
+</body>
+</html>
+
+
